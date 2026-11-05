@@ -40,13 +40,14 @@ class GrandPrix extends Equatable {
   bool get isUpcoming => status == 'Предстоящий этап';
 
   factory GrandPrix.fromJson(Map<String, dynamic> json) {
+    final roundNum = (json['round'] as num?)?.toInt() ?? 1;
     return GrandPrix(
-      id: json['id'] as String,
-      round: json['round'] as int,
-      title: json['title'] as String,
-      place: json['place'] as String,
-      date: json['date'] as String,
-      status: json['status'] as String,
+      id: (json['id'] as String?) ?? 'round-$roundNum',
+      round: roundNum,
+      title: (json['title'] as String?) ?? 'Grand Prix $roundNum',
+      place: (json['place'] as String?) ?? 'Circuit',
+      date: (json['date'] as String?) ?? 'TBA',
+      status: (json['status'] as String?) ?? 'Предстоящий этап',
       p1Name: json['p1Name'] as String?,
       p1Code: json['p1Code'] as String?,
       p1Time: json['p1Time'] as String?,
