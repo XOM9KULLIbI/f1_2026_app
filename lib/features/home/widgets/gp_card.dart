@@ -116,15 +116,19 @@ class GpCard extends StatelessWidget {
                           child: Row(
                             children: [
                               const Text('🥇 ', style: TextStyle(fontSize: 12)),
-                              Text(
-                                '${grandPrix.p1Name} (${grandPrix.p1Code})',
-                                style: const TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                  color: ThemeColors.gold,
+                              Expanded(
+                                child: Text(
+                                  '${grandPrix.p1Name} (${grandPrix.p1Code})',
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: ThemeColors.gold,
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
-                              const Spacer(),
+                              8.pw,
                               Text(
                                 grandPrix.p1Time ?? '',
                                 style: const TextStyle(

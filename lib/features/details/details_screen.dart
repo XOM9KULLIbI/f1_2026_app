@@ -163,15 +163,19 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     children: [
                       const Icon(Icons.location_on, size: 14, color: ThemeColors.racingRed),
                       6.pw,
-                      Text(
-                        gp.place,
-                        style: const TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500,
-                          color: ThemeColors.grey,
+                      Expanded(
+                        child: Text(
+                          gp.place,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: ThemeColors.grey,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const Spacer(),
+                      8.pw,
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(

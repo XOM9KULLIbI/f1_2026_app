@@ -63,13 +63,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   8.pw,
-                  const Text(
-                    'SEASON 2026',
-                    style: TextStyle(
-                      fontFamily: 'Formula1',
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: ThemeColors.white,
+                  const Expanded(
+                    child: Text(
+                      'SEASON 2026',
+                      style: TextStyle(
+                        fontFamily: 'Formula1',
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: ThemeColors.white,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ],
@@ -139,13 +143,17 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               const Icon(Icons.flag, color: ThemeColors.racingRed, size: 16),
               8.pw,
-              const Text(
-                'ОФИЦИАЛЬНЫЙ КАЛЕНДАРЬ И РЕЗУЛЬТАТЫ',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w900,
-                  color: ThemeColors.white,
-                  letterSpacing: 0.5,
+              const Expanded(
+                child: Text(
+                  'ОФИЦИАЛЬНЫЙ КАЛЕНДАРЬ И РЕЗУЛЬТАТЫ',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w900,
+                    color: ThemeColors.white,
+                    letterSpacing: 0.5,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
